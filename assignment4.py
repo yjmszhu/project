@@ -8,6 +8,7 @@ def startroom():
 			saferoom1()
 		elif select == "back":
 			print("There is no door but just wall!")
+			startroom()
 		elif select == "left":
 			saferoom3()
 		elif select == "right":
@@ -27,8 +28,10 @@ def saferoom1():
 			startroom()
 		elif select == "left":
 			print("There is no door but just wall!")
+			saferoom1()
 		elif select == "right":
 			print("There is no door but just wall!")
+			saferoom1()
 		else:
 			print("Invalid! Please enter only front/back/left/right.")
 
@@ -47,6 +50,7 @@ def saferoom2():
 			startroom()
 		elif select == "right":
 			print("There is no door but just wall!")
+			saferoom2()
 		else:
 			print("Invalid! Please enter only front/back/left/right.")
 
@@ -61,6 +65,7 @@ def saferoom3():
 			restart()
 		elif select == "back":
 			print("There is no door but just wall!")
+			saferoom3()
 		elif select == "left":
 			print("You are in evil demon room, the demon took your soul, you are dead!")
 			restart()
@@ -82,6 +87,7 @@ def saferoom4():
 			saferoom2()
 		elif select == "left":
 			print("There is no door but just wall!")
+			saferoom4()
 		elif select == "right":
 			print("You are in lethal gas room and cannot stand the air here, you are dead!")
 			restart()
@@ -101,6 +107,7 @@ def saferoom5():
 			saferoom1()
 		elif select == "left":
 			print("There is no door but just wall!")
+			saferoom5()
 		elif select == "right":
 			print("You are in dragon room, dragon threw a fire ball on you, you are dead!")
 			restart()
