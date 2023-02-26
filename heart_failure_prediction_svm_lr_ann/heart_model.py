@@ -27,7 +27,7 @@ def main():
     st.set_page_config(page_title='Heart Failure Death Predictor', layout='wide')
 
     ## add image
-    image = Image.open(r'heart.png')
+    image = Image.open(r'https://github.com/yjmszhu/project/tree/main/heart_failure_prediction_svm_lr_ann/heart.png')
     st.image(image, use_column_width=False)
 
     ## add page title and content
