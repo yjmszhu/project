@@ -5,7 +5,7 @@ import pickle
 import numpy as np
 
 ## loading the ann model
-with open(r'heart_model.sav', 'rb') as file:
+with open(r'https://github.com/yjmszhu/project/tree/main/heart_failure_prediction_svm_lr_ann/heart_model.sav', 'rb') as file:
     model = pickle.load(file)
 
 ## creat a function of prediction
