@@ -5,7 +5,7 @@ import pickle
 import numpy as np
 
 ## loading the ann model
-with open(r'heart_model.pkl', 'rb') as file:
+with open(r'heart_failure_prediction_svm_lr_ann/heart_model.pkl', 'rb') as file:
     model = pickle.load(file)
 
 ## creat a function of prediction
@@ -27,7 +27,7 @@ def main():
     st.set_page_config(page_title='Heart Failure Death Predictor', layout='wide')
 
     ## add image
-    image = Image.open(r'heart.png')
+    image = Image.open(r'heart_failure_prediction_svm_lr_ann/heart.png')
     st.image(image, use_column_width=False)
 
     ## add page title and content
