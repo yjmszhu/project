@@ -1,12 +1,11 @@
 ## import the libraries
 import streamlit as st
 from PIL import Image
-import pickle
+import keras
 import numpy as np
 
 ## loading the ann model
-with open(r'heart_failure_prediction_svm_lr_ann/heart_model.pkl', 'rb') as file:
-    model = pickle.load(file)
+model = keras.models.load_model("heart_model.h5")
 
 ## creat a function of prediction
 def heart_prediciton(input):
@@ -27,7 +26,7 @@ def main():
     st.set_page_config(page_title='Heart Failure Death Predictor', layout='wide')
 
     ## add image
-    image = Image.open(r'heart_failure_prediction_svm_lr_ann/heart.png')
+    image = Image.open(r'heart.png')
     st.image(image, use_column_width=False)
 
     ## add page title and content
