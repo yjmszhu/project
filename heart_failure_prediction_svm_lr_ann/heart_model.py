@@ -35,16 +35,16 @@ def main():
     
     ## variable inputs
     age = st.number_input('Age of the patient:',min_value=0, step=1)
-    anaemia = st.number_input('Anaemia | yes or no | yes = 1 and no = 0:',min_value=0, step=1, min_value=0, max_value=1)
+    anaemia = st.number_input('Anaemia | yes or no | yes = 1 and no = 0:',min_value=0, step=1, max_value=1)
     creatinine_phosphokinase = st.number_input('Level of the CPK enzyme in the blood (mcg/L):',min_value=0, step=1)
-    diabetes = st.number_input('Diabetes | yes or no | yes = 1 and no = 0:',min_value=0, step=1, min_value=0, max_value=1)
+    diabetes = st.number_input('Diabetes | yes or no | yes = 1 and no = 0:',min_value=0, step=1, max_value=1)
     ejection_fraction = st.number_input('Percentage of blood leaving the heart at each contraction:',min_value=0, step=1)
-    high_blood_pressure = st.number_input('Hypertension | yes or no | yes = 1 and no = 0:',min_value=0, step=1, min_value=0, max_value=1)
+    high_blood_pressure = st.number_input('Hypertension | yes or no | yes = 1 and no = 0:',min_value=0, step=1, max_value=1)
     platelets = st.number_input('Platelet count of blood (kiloplatelets/mL):',min_value=0, step=1)
     serum_creatinine = st.number_input('Level of serum creatinine in the blood (mg/dL):',min_value=0.00, step=0.01)
     serum_sodium = st.number_input('Level of serum sodium in the blood (mEq/L):',min_value=0, step=1)
-    sex = st.number_input('Sex | male or female | male = 1 and female = 0:',min_value=0, step=1, min_value=0, max_value=1)
-    smoking = st.number_input('Habit of smoking | yes or no | yes = 1 and no = 0:',min_value=0, step=1, min_value=0, max_value=1)
+    sex = st.number_input('Sex | male or female | male = 1 and female = 0:',min_value=0, step=1, max_value=1)
+    smoking = st.number_input('Habit of smoking | yes or no | yes = 1 and no = 0:',min_value=0, step=1, max_value=1)
     time = st.number_input('Follow-up period (days):',min_value=0, step=1)
 
     ## code for prediction
