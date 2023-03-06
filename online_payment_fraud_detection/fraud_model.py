@@ -5,7 +5,7 @@ import joblib
 import numpy as np
 
 ## loading the ann model
-model_LR = joblib.load('fraud_model.h5')
+model_LR = joblib.load('online_payment_fraud_detection/fraud_model.h5')
 
 ## creat a function of prediction
 def fraud_prediciton(input):
@@ -26,7 +26,7 @@ def main():
     st.set_page_config(page_title='Online Payment Fraud Detector', layout='wide')
 
     ## add image
-    image = Image.open(r'fraud_app.jpg')
+    image = Image.open(r'online_payment_fraud_detection/fraud_app.jpg')
     st.image(image, use_column_width=False)
 
     ## add page title and content
