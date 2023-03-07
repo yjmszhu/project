@@ -5,7 +5,7 @@ import joblib
 import numpy as np
 
 ## loading the ann model
-model_LR = joblib.load('online_payment_fraud_detection/fraud_model.h5')
+model_LR = joblib.load('fraud_model.h5')
 
 ## creat a function of prediction
 def fraud_prediciton(input):
@@ -26,7 +26,7 @@ def main():
     st.set_page_config(page_title='Online Payment Fraud Detector', layout='wide')
 
     ## add image
-    image = Image.open(r'online_payment_fraud_detection/fraud_app.jpg')
+    image = Image.open(r'fraud_app.jpg')
     st.image(image, use_column_width=False)
 
     ## add page title and content
@@ -38,10 +38,10 @@ def main():
     amount = st.number_input('Amount of online payment:',min_value=0.00, step=0.01)
     oldbalanceOrg = st.number_input('Balance of sender before the transaction:',min_value=0.00, step=0.01)
     oldbalanceDest = st.number_input('Balance of recipient before the transaction:',min_value=0.00, step=0.01)
-    type_CASH_IN = st.number_input('Cash in | yes or no | yes = 1 and no = 0:',min_value=0, step=1, max_value=1)
-    type_CASH_OUT = st.number_input('Cash out | yes or no | yes = 1 and no = 0:',min_value=0, step=1, max_value=1)
-    type_PAYMENT = st.number_input('Payment | yes or no | yes = 1 and no = 0:',min_value=0, step=1, max_value=1)
-    type_TRANSFER = st.number_input('Transfer | yes or no | yes = 1 and no = 0:',min_value=0, step=1, max_value=1)
+    type_CASH_IN = st.number_input('Is it a cash-in transaction | yes or no | yes = 1 and no = 0:',min_value=0, step=1, max_value=1)
+    type_CASH_OUT = st.number_input('Is it a cash-out transaction | yes or no | yes = 1 and no = 0:',min_value=0, step=1, max_value=1)
+    type_PAYMENT = st.number_input('Is it a payment transaction | yes or no | yes = 1 and no = 0:',min_value=0, step=1, max_value=1)
+    type_TRANSFER = st.number_input('Is it a transfer transaction | yes or no | yes = 1 and no = 0:',min_value=0, step=1, max_value=1)
 
     ## code for prediction
     predict = ''
