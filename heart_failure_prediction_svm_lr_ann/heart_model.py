@@ -5,7 +5,7 @@ import keras
 import numpy as np
 
 ## loading the ann model
-model = keras.models.load_model("heart_model.h5")
+model = keras.models.load_model("heart_failure_prediction_svm_lr_ann/heart_model.h5")
 
 ## creat a function of prediction
 def heart_prediciton(input):
@@ -26,7 +26,7 @@ def main():
     st.set_page_config(page_title='Heart Failure Death Predictor', layout='wide')
 
     ## add image
-    image = Image.open(r'heart.png')
+    image = Image.open(r'heart_failure_prediction_svm_lr_ann/heart.png')
     st.image(image, use_column_width=False)
 
     ## add page title and content
