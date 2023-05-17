@@ -1,19 +1,18 @@
 ## import the libraries
 import streamlit as st
 from PIL import Image
-import pickle
+import joblib
 import numpy as np
 
 ## loading the ann model
-with open('fraud_model.pickle', 'rb') as file:
-    model_KNN = pickle.load(file)
+model_LR = joblib.load('fraud_model.h5')
 
 ## creat a function of prediction
 def fraud_prediciton(input):
     input_array = np.asarray(input)
     input_reshape = input_array.reshape(1,-1)
 
-    prediction = model_KNN.predict(input_reshape)
+    prediction = model_LR.predict(input_reshape)
     print(prediction)
     
     # predict
